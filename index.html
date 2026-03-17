@@ -16,90 +16,19 @@
       color: #2d2d2d;
       font-size: 15px;
       line-height: 1.5;
-      transition: background .25s, color .25s;
     }
-
-    /* ── Dark mode ── */
-    body.dark {
-      background: #111827;
-      color: #e5e7eb;
-    }
-    body.dark .card {
-      background: #1f2937;
-      box-shadow: 0 3px 14px rgba(0,0,0,.7);
-    }
-    body.dark .app-header {
-      background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
-      box-shadow: 0 3px 12px rgba(0,0,0,.6);
-    }
-    body.dark .form-label { color: #e5e7eb; }
-    body.dark .form-sub { color: #9ca3af; }
-    body.dark input[type=number] {
-      background: #020617;
-      border-color: #374151;
-      color: #e5e7eb;
-    }
-    body.dark input[type=number]:focus {
-      border-color: #60a5fa;
-      background: #020617;
-    }
-    body.dark .sex-btn {
-      background: #020617;
-      border-color: #374151;
-    }
-    body.dark .sex-btn.selected {
-      background: #1d4ed8;
-      border-color: #60a5fa;
-    }
-    body.dark .opt-label {
-      background: #020617;
-      border-color: #374151;
-    }
-    body.dark .opt-label.selected {
-      background: #1d4ed8;
-      border-color: #60a5fa;
-    }
-    body.dark .disclaimer {
-      background: #1f2937;
-      border-left-color: #f59e0b;
-      color: #e5e7eb;
-    }
-    body.dark .divider { background: #374151; }
-    body.dark .lipid-item { background: #020617; }
-    body.dark .ldl-box { background: #020617; }
-    body.dark .ldl-target { background: #1e3a8a; }
-    body.dark .lifestyle-grid .ls-item { background: #020617; }
-    body.dark .tab-btn { color: #9ca3af; }
-    body.dark .tab-btn.active { color: #60a5fa; border-bottom-color: #60a5fa; }
-    body.dark .alert-info { background: #1e293b; color: #e5e7eb; border-left-color: #60a5fa; }
-    body.dark .alert-success { background: #064e3b; color: #e5e7eb; }
-    body.dark .alert-warn { background: #78350f; color: #fef3c7; }
-    body.dark .alert-danger { background: #7f1d1d; color: #fee2e2; }
-    body.dark .btn-secondary { background: #111827; color: #e5e7eb; }
-    body.dark .btn-secondary:hover { background: #1f2937; }
 
     /* ── Header ── */
     .app-header {
       background: linear-gradient(135deg, #0d47a1 0%, #0288d1 100%);
       color: #fff;
-      padding: 18px 20px 10px;
+      padding: 18px 20px 16px;
       text-align: center;
       position: sticky; top: 0; z-index: 100;
       box-shadow: 0 3px 12px rgba(0,0,0,.25);
     }
-    .app-header-top {
-      display:flex;justify-content:space-between;align-items:center;gap:8px;max-width:680px;margin:0 auto;
-    }
     .app-header h1 { font-size: 1.25rem; font-weight: 700; letter-spacing: .5px; }
     .app-header p  { font-size: .78rem; opacity: .88; margin-top: 3px; }
-
-    .theme-toggle {
-      border-radius:999px;border:1px solid rgba(255,255,255,.6);
-      padding:5px 10px;font-size:.78rem;background:rgba(15,23,42,.25);
-      color:#fff;cursor:pointer;display:flex;align-items:center;gap:6px;
-      backdrop-filter:blur(6px);
-    }
-    .theme-toggle span { font-size:.95rem; }
 
     /* ── Container ── */
     .container { max-width: 680px; margin: 0 auto; padding: 20px 16px 40px; }
@@ -131,20 +60,17 @@
       background: #fff; border-radius: 16px;
       padding: 22px 20px; margin-bottom: 16px;
       box-shadow: 0 3px 14px rgba(0,0,0,.07);
-      transition: background .25s, box-shadow .25s, border .25s;
     }
     .card-title {
       display: flex; align-items: center; gap: 10px;
       font-size: 1.05rem; font-weight: 700; color: #0d47a1;
       margin-bottom: 18px;
     }
-    body.dark .card-title { color:#bfdbfe; }
     .card-icon {
       width: 34px; height: 34px; border-radius: 9px;
       background: #e3f2fd; display: flex; align-items: center;
       justify-content: center; font-size: 1rem; flex-shrink: 0;
     }
-    body.dark .card-icon { background:#1e3a8a;color:#e5e7eb; }
 
     /* ── Form ── */
     .form-group { margin-bottom: 18px; }
@@ -157,7 +83,7 @@
       width: 100%; padding: 11px 14px;
       border: 2px solid #e0e0e0; border-radius: 10px;
       font-size: .98rem; color: #333; outline: none;
-      transition: border-color .2s, background .2s; background: #fafafa;
+      transition: border-color .2s; background: #fafafa;
       -moz-appearance: textfield;
     }
     input[type=number]::-webkit-inner-spin-button,
@@ -192,6 +118,9 @@
       width: 18px; height: 18px; margin-top: 1px; cursor: pointer;
       flex-shrink: 0; accent-color: #1565c0;
     }
+    .opt-text {}
+    .opt-title { font-weight: 600; color: #2d2d2d; font-size: .9rem; }
+    .opt-desc  { font-size: .76rem; color: #666; margin-top: 2px; }
 
     /* Collapsible extra section */
     .subsection {
@@ -199,7 +128,6 @@
       background: #fff8f0; border-radius: 10px;
       border: 1px solid #ffe0b2;
     }
-    body.dark .subsection { background:#78350f;border-color:#fbbf24;color:#fef3c7; }
     .subsection-title { font-size: .85rem; font-weight: 700; color: #b45309; margin-bottom: 10px; }
 
     /* Divider */
@@ -258,13 +186,10 @@
       background: #fff; border: 3px solid #333;
       transition: left .6s cubic-bezier(.34,1.56,.64,1);
     }
-    body.dark .meter-pointer { border-color:#e5e7eb; }
-
     .meter-labels {
       display: flex; justify-content: space-between;
       font-size: .68rem; color: #666; padding: 0 2px;
     }
-    body.dark .meter-labels { color:#9ca3af; }
 
     /* LDL comparison grid */
     .ldl-compare {
@@ -294,7 +219,6 @@
     .nhs-sub   { font-size: .7rem; color: #888; }
     .nhs-val   { font-size: 1.05rem; font-weight: 700; color: #6a1b9a; text-align: right; }
     .nhs-tgt   { font-size: .72rem; color: #888; text-align: right; }
-    body.dark .non-hdl-strip { background:#4c1d95;color:#e5e7eb; }
 
     /* Lipid cards */
     .lipid-grid {
@@ -314,8 +238,6 @@
     .li-msg.ok  { color: #2e7d32; }
     .li-msg.mid { color: #e65100; }
     .li-msg.bad { color: #c62828; }
-    body.dark .li-name { color:#9ca3af; }
-    body.dark .li-val { color:#e5e7eb; }
 
     /* Alert boxes */
     .alert {
@@ -346,8 +268,6 @@
     .edu-p  { font-size: .84rem; color: #444; line-height: 1.65; }
     .edu-ul { padding-left: 18px; }
     .edu-ul li { font-size: .84rem; color: #444; margin-bottom: 4px; line-height: 1.55; }
-    body.dark .edu-h { color:#bfdbfe; }
-    body.dark .edu-p, body.dark .edu-ul li { color:#e5e7eb; }
 
     /* Treatment steps */
     .t-step { display: flex; gap: 12px; margin-bottom: 13px; }
@@ -359,7 +279,6 @@
     }
     .t-body { padding-top: 3px; }
     .t-body p { font-size: .84rem; color: #444; line-height: 1.55; }
-    body.dark .t-body p { color:#e5e7eb; }
 
     /* Lifestyle grid */
     .lifestyle-grid {
@@ -373,16 +292,12 @@
     .ls-emoji { font-size: 1.5rem; display: block; margin-bottom: 4px; }
     .ls-title { font-size: .78rem; font-weight: 700; color: #333; }
     .ls-desc  { font-size: .7rem; color: #666; margin-top: 2px; }
-    body.dark .ls-title { color:#e5e7eb; }
-    body.dark .ls-desc { color:#9ca3af; }
 
     /* Welcome */
     .welcome-hero { text-align: center; margin-bottom: 18px; }
     .welcome-icon { font-size: 3.5rem; }
     .welcome-title { font-size: 1.2rem; font-weight: 700; color: #0d47a1; margin-top: 8px; }
     .welcome-sub   { font-size: .86rem; color: #555; margin-top: 6px; line-height: 1.6; }
-    body.dark .welcome-title { color:#bfdbfe; }
-    body.dark .welcome-sub { color:#e5e7eb; }
 
     .feature-list { margin: 14px 0 18px; display: flex; flex-direction: column; gap: 9px; }
     .feat-item { display: flex; align-items: center; gap: 10px; font-size: .86rem; color: #444; }
@@ -391,8 +306,6 @@
       display: flex; align-items: center; justify-content: center;
       font-size: .95rem; flex-shrink: 0;
     }
-    body.dark .feat-item { color:#e5e7eb; }
-    body.dark .feat-icon { background:#1e3a8a;color:#e5e7eb; }
 
     /* Screen management */
     .screen { display: none; }
@@ -403,7 +316,6 @@
       .no-print { display: none !important; }
       .app-header { position: static; }
       .card { box-shadow: none; }
-      body { background:#fff;color:#000; }
     }
     @media (max-width: 400px) {
       .lifestyle-grid { grid-template-columns: repeat(2,1fr); }
@@ -416,27 +328,13 @@
       cursor: pointer; margin-top: 10px; transition: all .2s;
     }
     .btn-reset:hover { background: #e3f2fd; }
-
-    /* Doctor summary */
-    .doctor-summary {
-      background:#e5f3ff;border-radius:12px;padding:12px 14px;font-size:.82rem;margin-top:6px;
-    }
-    body.dark .doctor-summary { background:#111827;color:#e5e7eb;border:1px dashed #60a5fa; }
-    .doctor-summary strong { font-weight:700; }
   </style>
 </head>
 <body>
 
 <header class="app-header">
-  <div class="app-header-top">
-    <div style="text-align:left;">
-      <h1>🫀 血脂健康評估工具</h1>
-      <p>依據 2025 台灣血脂管理臨床路徑共識</p>
-    </div>
-    <button class="theme-toggle no-print" id="theme-toggle">
-      <span id="theme-emoji">🌙</span><span id="theme-text">深色模式</span>
-    </button>
-  </div>
+  <h1>🫀 血脂健康評估工具</h1>
+  <p>依據 2025 台灣血脂管理臨床路徑共識</p>
 </header>
 
 <!-- ==================== SCREEN 0: Welcome ==================== -->
@@ -459,9 +357,8 @@
       <strong>⚠️ 重要免責聲明</strong>
       本工具<strong>僅供衛教參考，無法取代醫師的專業診斷與治療建議</strong>。所有評估結果均應與主治醫師確認。若有任何不適或疑問，請立即就醫。本工具不提供診斷或處方決策。
     </div>
-    <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+    <div style="margin-top:14px;">
       <button class="btn btn-primary" onclick="go(1)">開始評估 →</button>
-      <button class="btn btn-secondary no-print" onclick="loadLastAndStart()">載入上次填寫資料</button>
     </div>
   </div>
 </div>
@@ -494,8 +391,6 @@
         </div>
         <div class="err-msg" id="e-sex"></div>
       </div>
-
-      <button class="btn btn-secondary no-print" style="margin-top:4px;" onclick="fillDemoBasic()">一鍵填入範例基本資料</button>
     </div>
     <button class="btn btn-primary no-print" onclick="step1Next()">下一步 →</button>
   </div>
@@ -548,8 +443,6 @@
         </div>
         <div class="err-msg" id="e-tg"></div>
       </div>
-
-      <button class="btn btn-secondary no-print" style="margin-top:4px;" onclick="fillDemoLipid()">一鍵填入範例血脂數值</button>
     </div>
     <div class="btn-row no-print">
       <button class="btn btn-secondary" onclick="go(1)">← 上一步</button>
@@ -758,13 +651,6 @@
       <div class="lipid-grid" id="lipid-grid"></div>
     </div>
 
-    <!-- Doctor summary -->
-    <div class="card">
-      <div class="card-title"><div class="card-icon">📝</div>給門診醫師的摘要</div>
-      <div class="doctor-summary" id="doctor-summary"></div>
-      <p style="font-size:.78rem;color:#6b7280;margin-top:6px;">（建議列印時一併帶給主治醫師，作為討論治療目標與策略的參考。）</p>
-    </div>
-
     <!-- Education Tabs -->
     <div class="card">
       <div class="card-title"><div class="card-icon">📋</div>個人化衛教資訊</div>
@@ -829,12 +715,6 @@
 
 <!-- ==================== SCRIPT ==================== -->
 <script>
-/* ─── 小工具函式 ─── */
-const q  = sel => document.querySelector(sel);
-const qa = sel => Array.from(document.querySelectorAll(sel));
-const setText = (id, txt) => { const el = typeof id==='string'?document.getElementById(id):id; if (el) el.textContent = txt; };
-const toggleClass = (el, cls, on) => el && el.classList.toggle(cls, on);
-
 /* ─── State ─── */
 const D = {
   age: null, sex: null,
@@ -845,26 +725,14 @@ const D = {
   smoking: false, famhx: false, metsyn: false
 };
 
-const STORAGE_KEY = 'lipidToolState_v1';
-const THEME_KEY   = 'lipidToolTheme_v1';
-
 let chartInst = null;
 
 /* ─── Navigation ─── */
 function go(n) {
-  qa('.screen').forEach(s => s.classList.remove('active'));
-  q('#s' + n).classList.add('active');
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('s' + n).classList.add('active');
   window.scrollTo(0, 0);
   if (n >= 1 && n <= 4) renderProgress(n);
-}
-
-function loadLastAndStart() {
-  if (!loadStateFromStorage()) {
-    alert('目前沒有可載入的上次資料。');
-    return;
-  }
-  syncStateToForm();
-  go(1);
 }
 
 /* ─── Progress bar ─── */
@@ -893,10 +761,9 @@ function renderProgress(current) {
 /* ─── Sex ─── */
 function pickSex(sex) {
   D.sex = sex;
-  toggleClass(q('#btn-male'), 'selected', sex === 'male');
-  toggleClass(q('#btn-female'), 'selected', sex === 'female');
-  setText('e-sex', '');
-  saveStateToStorage();
+  document.getElementById('btn-male').classList.toggle('selected', sex === 'male');
+  document.getElementById('btn-female').classList.toggle('selected', sex === 'female');
+  document.getElementById('e-sex').textContent = '';
 }
 
 /* ─── Checkbox toggles ─── */
@@ -904,44 +771,37 @@ function onAscvdChange(key, cb) {
   D[key] = cb.checked;
   cb.closest('.opt-label').classList.toggle('selected', cb.checked);
   const hasAscvd = ['acs','revasc','stroke','pad','plaque'].some(k => D[k]);
-  q('#extreme-sub').style.display = hasAscvd ? 'block' : 'none';
-  saveStateToStorage();
+  document.getElementById('extreme-sub').style.display = hasAscvd ? 'block' : 'none';
 }
 function onExtraChange(key, cb) {
   D[key] = cb.checked;
   cb.closest('.opt-label').classList.toggle('selected', cb.checked);
-  saveStateToStorage();
 }
 function onFactorChange(key, cb) {
   D[key] = cb.checked;
   cb.closest('.opt-label').classList.toggle('selected', cb.checked);
-  saveStateToStorage();
 }
 
 /* ─── Validation ─── */
 function step1Next() {
   let ok = true;
-  const ageEl = q('#f-age');
-  const age = parseInt(ageEl.value);
+  const age = parseInt(document.getElementById('f-age').value);
   if (!age || age < 18 || age > 120) {
-    setText('e-age', '請輸入有效年齡（18–120 歲）');
-    ageEl.classList.add('err');
+    document.getElementById('e-age').textContent = '請輸入有效年齡（18–120 歲）';
+    document.getElementById('f-age').classList.add('err');
     ok = false;
   } else {
-    setText('e-age', '');
-    ageEl.classList.remove('err');
+    document.getElementById('e-age').textContent = '';
+    document.getElementById('f-age').classList.remove('err');
     D.age = age;
   }
   if (!D.sex) {
-    setText('e-sex', '請選擇性別');
+    document.getElementById('e-sex').textContent = '請選擇性別';
     ok = false;
   } else {
-    setText('e-sex', '');
+    document.getElementById('e-sex').textContent = '';
   }
-  if (ok) {
-    saveStateToStorage();
-    go(2);
-  }
+  if (ok) go(2);
 }
 
 function step2Next() {
@@ -953,23 +813,19 @@ function step2Next() {
   ];
   let ok = true;
   fields.forEach(f => {
-    const input = q('#' + f.id);
-    const val = parseFloat(input.value);
-    const errElId = 'e-' + f.id.replace('f-','');
+    const val = parseFloat(document.getElementById(f.id).value);
+    const errEl = document.getElementById('e-' + f.id.replace('f-',''));
     if (!val || val < f.min || val > f.max) {
-      setText(errElId, `請輸入有效的${f.label}數值`);
-      input.classList.add('err');
+      errEl.textContent = `請輸入有效的${f.label}數值`;
+      document.getElementById(f.id).classList.add('err');
       ok = false;
     } else {
-      setText(errElId, '');
-      input.classList.remove('err');
+      errEl.textContent = '';
+      document.getElementById(f.id).classList.remove('err');
       D[f.key] = val;
     }
   });
-  if (ok) {
-    saveStateToStorage();
-    go(3);
-  }
+  if (ok) go(3);
 }
 
 /* ─── Risk Calculation ─── */
@@ -1011,25 +867,30 @@ function showResults() {
   const tgt  = info.ldlTgt;
   const achieved = ldl < tgt;
 
-  const badge = q('#r-badge');
+  // Badge
+  const badge = document.getElementById('r-badge');
   badge.className = 'risk-badge ' + info.cls;
   badge.innerHTML = `⚡ ${info.label}`;
 
-  q('#meter-ptr').style.left = info.ptr;
+  // Meter
+  document.getElementById('meter-ptr').style.left = info.ptr;
 
-  const curEl = q('#r-ldl-cur');
-  curEl.textContent = ldl;
-  curEl.style.color = achieved ? '#2e7d32' : '#c62828';
-  setText('r-ldl-tgt', '<' + tgt);
+  // LDL boxes
+  document.getElementById('r-ldl-cur').textContent = ldl;
+  document.getElementById('r-ldl-cur').style.color = achieved ? '#2e7d32' : '#c62828';
+  document.getElementById('r-ldl-tgt').textContent = '<' + tgt;
 
-  q('#ldl-alert-box').innerHTML = achieved
-    ? alert_box('success','✅',`<strong>恭喜！您的 LDL-C（${ldl} mg/dL）已達到建議治療目標（&lt;${tgt} mg/dL）。</strong>請繼續維持並依建議<strong>${info.interval}</strong>追蹤血脂指標。`)
-    : alert_box((risk === 'low' || risk === 'medium') ? 'warn' : 'danger','⚠️',`<strong>您的 LDL-C（${ldl} mg/dL）尚未達到治療目標（&lt;${tgt} mg/dL），</strong>還需降低約 <strong>${(ldl - tgt).toFixed(0)} mg/dL</strong>。請與醫師討論改善方案。`);
+  // Alert
+  document.getElementById('ldl-alert-box').innerHTML = achieved
+    ? `<div class="alert alert-success"><span class="alert-icon">✅</span><div>LDL-C <strong>${ldl} mg/dL</strong> 已達到建議治療目標（&lt;${tgt} mg/dL）。請繼續維持並定期追蹤。</div></div>`
+    : `<div class="alert alert-danger"><span class="alert-icon">⚠️</span><div>LDL-C <strong>${ldl} mg/dL</strong> 尚未達到治療目標（&lt;${tgt} mg/dL），還需降低約 <strong>${(ldl - tgt).toFixed(0)} mg/dL</strong>。請與醫師討論改善方案。</div></div>`;
 
+  // Non-HDL
   const nonHdl = D.tc - D.hdl;
-  setText('r-nonhdl-val', nonHdl.toFixed(0) + ' mg/dL');
-  setText('r-nonhdl-tgt', '<' + info.nonHdlTgt + ' mg/dL');
+  document.getElementById('r-nonhdl-val').textContent = nonHdl.toFixed(0) + ' mg/dL';
+  document.getElementById('r-nonhdl-tgt').textContent = '<' + info.nonHdlTgt + ' mg/dL';
 
+  // Lipid cards
   const hdlLow = (D.sex === 'male' && D.hdl < 40) || (D.sex === 'female' && D.hdl < 50);
   const lipids = [
     { name:'總膽固醇', val:D.tc,
@@ -1049,7 +910,7 @@ function showResults() {
       msg: D.tg<150?'✅ 正常範圍': D.tg<200?'⚠️ 輕度偏高':'❌ 明顯偏高',
       mskcls: D.tg<150?'ok':D.tg<200?'mid':'bad' },
   ];
-  q('#lipid-grid').innerHTML = lipids.map(l =>
+  document.getElementById('lipid-grid').innerHTML = lipids.map(l =>
     `<div class="lipid-item ${l.cls}">
       <div class="li-name">${l.name}</div>
       <div class="li-val">${l.val} <span class="li-unit">mg/dL</span></div>
@@ -1057,8 +918,9 @@ function showResults() {
     </div>`
   ).join('');
 
+  // Chart
   if (chartInst) chartInst.destroy();
-  const ctx = q('#ldl-chart').getContext('2d');
+  const ctx = document.getElementById('ldl-chart').getContext('2d');
   const maxY = Math.max(ldl, tgt + 40, 200);
   chartInst = new Chart(ctx, {
     type: 'bar',
@@ -1090,10 +952,9 @@ function showResults() {
     }
   });
 
-  q('#treatment-html').innerHTML = buildTreatment(risk, info);
-  q('#doctor-summary').innerHTML = buildDoctorSummary(risk, info);
+  // Treatment content
+  document.getElementById('treatment-html').innerHTML = buildTreatment(risk, info);
 
-  saveStateToStorage();
   go(5);
 }
 
@@ -1110,6 +971,7 @@ function buildTreatment(risk, info) {
   }
 
   if (info.secondary) {
+    // Secondary prevention
     h += `<div class="edu-h" style="margin-top:14px;">次級預防處置建議</div>`;
     h += `<p class="edu-p" style="margin-bottom:12px;">您屬於<strong>次級預防</strong>族群（已確診 ASCVD 或影像確認嚴重動脈斑塊），需積極控制血脂。</p>`;
     h += step_item(1,'<strong>起始藥物治療：</strong>依基線 LDL-C、過去用藥史及臨床狀況，醫師通常給予<strong>中至高強度 statin 類藥物</strong>，必要時合併 ezetimibe。');
@@ -1117,6 +979,7 @@ function buildTreatment(risk, info) {
     h += step_item(3,'<strong>未達標時：</strong>醫師可調整至高強度 statin 或最大耐受劑量，並考慮加上 ezetimibe、PCSK9 抑制劑（siRNA 或單株抗體）等 non-statin 藥物。');
     h += step_item(4,`<strong>達標後長期追蹤：</strong>建議<strong>${info.interval}</strong>追蹤完整血脂指標，確保 LDL-C 持續達標。`);
   } else {
+    // Primary prevention
     h += `<div class="edu-h" style="margin-top:14px;">初級預防處置建議</div>`;
     h += `<p class="edu-p" style="margin-bottom:12px;">您目前屬於<strong>初級預防</strong>族群，尚未確診 ASCVD，目標為及早預防心血管事件。</p>`;
     if (risk === 'high') {
@@ -1128,14 +991,15 @@ function buildTreatment(risk, info) {
       h += step_item(2,`<strong>3–6 個月後追蹤：</strong>抽血評估 LDL-C 是否達到目標（&lt;${tgt} mg/dL）。若未達標，可考慮中強度 statin 治療。`);
       h += step_item(3,'<strong>考慮藥物治療：</strong>若改善後仍未達標，在醫病共享決策後可開始長期血脂藥物治療。');
     }
-    h += step_item(4, `<strong>達標後定期追蹤：</strong>建議<strong>${info.interval}</strong>追蹤完整血脂指標。`);
+    h += step_item(risk === 'high' ? 4 : 4, `<strong>達標後定期追蹤：</strong>建議<strong>${info.interval}</strong>追蹤完整血脂指標。`);
   }
 
+  // Special warnings
   if (D.ldl >= 190) {
     h += alert_box('warn','⚠️','<strong>嚴重高膽固醇血症提醒：</strong>您的 LDL-C ≥190 mg/dL，建議請醫師評估是否符合<strong>家族性高膽固醇血症（FH）</strong>診斷標準，必要時可進行基因篩檢。');
   }
   h += `<div style="height:6px;"></div>`;
-  h += alert_box('info','💬','<strong>重要提醒：</strong>以上建議僅供衛教參考。實際治療決策包括是否用藥、藥物選擇與劑量，請由您的主治醫師依完整臨床資訊評估決定。`);
+  h += alert_box('info','💬','<strong>重要提醒：</strong>以上建議僅供衛教參考。實際治療決策包括是否用藥、藥物選擇與劑量，請由您的主治醫師依完整臨床資訊評估決定。');
   return h;
 }
 
@@ -1146,52 +1010,21 @@ function step_item(num, content) {
   return `<div class="t-step"><div class="t-num">${num}</div><div class="t-body"><p>${content}</p></div></div>`;
 }
 
-/* ─── Doctor summary ─── */
-function buildDoctorSummary(risk, info) {
-  const ldl = D.ldl;
-  const tgt = info.ldlTgt;
-  const gap = (ldl - tgt).toFixed(0);
-  const riskLabel = info.label;
-
-  const ageText = D.age ? `${D.age} 歲` : '年齡未填';
-  const sexText = D.sex === 'male' ? '男性' : (D.sex === 'female' ? '女性' : '性別未填');
-
-  const ascvdFlag = (D.acs || D.revasc || D.stroke || D.pad || D.plaque)
-    ? '已有 ASCVD / 影像學嚴重斑塊病史'
-    : '目前無已知 ASCVD 病史（病人自述）';
-
-  const riskPart = `依病史與血脂數值分層為：<strong>${riskLabel}</strong>（LDL-C 目標 &lt;${tgt} mg/dL）。`;
-
-  const ldlPart = ldl
-    ? (ldl < tgt
-      ? `目前 LDL-C 為 <strong>${ldl} mg/dL</strong>，已達建議目標。`
-      : `目前 LDL-C 為 <strong>${ldl} mg/dL</strong>，尚未達建議目標，約需再降低 <strong>${gap} mg/dL</strong>。`)
-    : '尚未輸入 LDL-C 數值。';
-
-  return `
-    就診者概況：<strong>${ageText}、${sexText}</strong>。<br>
-    病史摘要：${ascvdFlag}。<br>
-    風險分層結果：${riskPart}<br>
-    LDL-C 概況：${ldlPart}<br>
-    建議：請醫師依完整臨床資訊與病人共同決策血脂治療策略與追蹤頻率。
-  `;
-}
-
 /* ─── Tabs ─── */
 function switchTab(name, btn) {
-  qa('.tab-btn').forEach(b => b.classList.remove('active'));
-  qa('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
   if (btn) btn.classList.add('active');
-  q('#tab-' + name).classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
 }
 
 /* ─── Export PDF ─── */
 function exportPDF() {
-  const btn = q('#pdf-btn');
+  const btn = document.getElementById('pdf-btn');
   btn.textContent = '⏳ 產生中...';
   btn.disabled = true;
 
-  const el = q('#s5');
+  const el = document.getElementById('s5');
 
   const opt = {
     margin:       [10, 10, 10, 10],
@@ -1202,6 +1035,7 @@ function exportPDF() {
     pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
   };
 
+  // Temporarily hide no-print elements inside s5
   const noPrintEls = el.querySelectorAll('.no-print');
   noPrintEls.forEach(e => e.style.visibility = 'hidden');
 
@@ -1221,139 +1055,18 @@ function exportPDF() {
 function resetAll() {
   Object.keys(D).forEach(k => { D[k] = (typeof D[k] === 'boolean') ? false : null; });
   ['f-age','f-tc','f-ldl','f-hdl','f-tg'].forEach(id => {
-    const el = q('#' + id);
+    const el = document.getElementById(id);
     if (el) { el.value = ''; el.classList.remove('err'); }
   });
-  qa('input[type=checkbox]').forEach(cb => {
+  document.querySelectorAll('input[type=checkbox]').forEach(cb => {
     cb.checked = false;
     cb.closest('.opt-label').classList.remove('selected');
   });
-  q('#btn-male').classList.remove('selected');
-  q('#btn-female').classList.remove('selected');
-  q('#extreme-sub').style.display = 'none';
-  localStorage.removeItem(STORAGE_KEY);
+  document.getElementById('btn-male').classList.remove('selected');
+  document.getElementById('btn-female').classList.remove('selected');
+  document.getElementById('extreme-sub').style.display = 'none';
   go(1);
 }
-
-/* ─── LocalStorage 同步 ─── */
-function saveStateToStorage() {
-  try {
-    const data = JSON.stringify(D);
-    localStorage.setItem(STORAGE_KEY, data);
-  } catch (e) {}
-}
-
-function loadStateFromStorage() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return false;
-    const obj = JSON.parse(raw);
-    if (!obj || typeof obj !== 'object') return false;
-    Object.keys(D).forEach(k => {
-      if (k in obj) D[k] = obj[k];
-    });
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function syncStateToForm() {
-  if (D.age) q('#f-age').value = D.age;
-  if (D.sex) pickSex(D.sex);
-  if (D.tc)  q('#f-tc').value  = D.tc;
-  if (D.ldl) q('#f-ldl').value = D.ldl;
-  if (D.hdl) q('#f-hdl').value = D.hdl;
-  if (D.tg)  q('#f-tg').value  = D.tg;
-
-  const ascvdKeys = ['acs','revasc','stroke','pad','plaque'];
-  ascvdKeys.forEach(k => {
-    const cb = q('#opt-' + k + ' input[type=checkbox]');
-    if (cb) {
-      cb.checked = !!D[k];
-      cb.closest('.opt-label').classList.toggle('selected', !!D[k]);
-    }
-  });
-
-  const extraKeys = ['mi1yr','mi2plus','multivessel','carotid'];
-  extraKeys.forEach(k => {
-    const cb = q('#opt-' + k + ' input[type=checkbox]');
-    if (cb) {
-      cb.checked = !!D[k];
-      cb.closest('.opt-label').classList.toggle('selected', !!D[k]);
-    }
-  });
-
-  const factorKeys = ['diabetes','ckd','htn','cac400','smoking','famhx','metsyn'];
-  factorKeys.forEach(k => {
-    const cb = q('#opt-' + k + ' input[type=checkbox]');
-    if (cb) {
-      cb.checked = !!D[k];
-      cb.closest('.opt-label').classList.toggle('selected', !!D[k]);
-    }
-  });
-
-  const hasAscvd = ascvdKeys.some(k => D[k]);
-  q('#extreme-sub').style.display = hasAscvd ? 'block' : 'none';
-}
-
-/* ─── Demo 填值 ─── */
-function fillDemoBasic() {
-  q('#f-age').value = 58;
-  D.age = 58;
-  pickSex('male');
-  saveStateToStorage();
-}
-function fillDemoLipid() {
-  q('#f-tc').value  = 210;
-  q('#f-ldl').value = 135;
-  q('#f-hdl').value = 42;
-  q('#f-tg').value  = 180;
-  D.tc  = 210;
-  D.ldl = 135;
-  D.hdl = 42;
-  D.tg  = 180;
-  saveStateToStorage();
-}
-
-/* ─── Theme / Dark mode ─── */
-function applyTheme(theme) {
-  const isDark = theme === 'dark';
-  document.body.classList.toggle('dark', isDark);
-  const emoji = q('#theme-emoji');
-  const text = q('#theme-text');
-  if (isDark) {
-    emoji.textContent = '☀️';
-    text.textContent = '淺色模式';
-  } else {
-    emoji.textContent = '🌙';
-    text.textContent = '深色模式';
-  }
-}
-
-function loadTheme() {
-  try {
-    const t = localStorage.getItem(THEME_KEY);
-    if (!t) return;
-    applyTheme(t);
-  } catch(e) {}
-}
-
-function toggleTheme() {
-  const isDark = document.body.classList.contains('dark');
-  const next = isDark ? 'light' : 'dark';
-  applyTheme(next);
-  try {
-    localStorage.setItem(THEME_KEY, next);
-  } catch(e) {}
-}
-
-/* ─── Init ─── */
-document.addEventListener('DOMContentLoaded', () => {
-  loadTheme();
-  const btn = q('#theme-toggle');
-  if (btn) btn.addEventListener('click', toggleTheme);
-});
 </script>
 </body>
 </html>
